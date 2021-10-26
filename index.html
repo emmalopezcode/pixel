@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pixels</title>
+    <script src="../p5.min.js"></script>
+    <script src="./jscolor.min.js"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>
+        Pixel Art Creator
+    </h1>
+    <h3 class="tutorial">
+        Click on the canvas to paint!
+        Use the scrolling bar or the left and right arrow keys to adjust the size of your brush.
+        Feel free to save or screenshot your images and share them with me!
+    </h3>
+    <div class="buttons-pix">
+        <input onclick="changeSize();" type="range" value="increase" id="size">
+        <span id="sizeprint"> 50</span>
+        <input onchange="updateColor(this.value)" value="rgba(60,151,255,1)" data-jscolor="{}" class="color-picker">
+        <input onclick="reset();" type="button" value="clear" id="reset">
+        <input onclick="saveCanvas();" type="button" value="save" id="reset">
+    </div>
+
+    <div id="sketch-holder"></div>
+
+</body>
+
+</html>
